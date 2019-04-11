@@ -1,13 +1,13 @@
-job('XRay Demo - TMODocuments') {
+job('XRay Demo - CTCT') {
 
   	  properties {
-        githubProjectUrl('file:///opt/XRayDemo/TMODocuments')
+        githubProjectUrl('file:///opt/XRayDemo/CTCT')
     }
   
     scm {
     	git {
           remote {
-	  	       url('file:///opt/XRayDemo/TMODocuments')
+	  	       url('file:///opt/XRayDemo/CTCT')
           }
           branch('**/master')
           extensions {

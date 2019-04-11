@@ -1,13 +1,13 @@
-job('XRay Demo - TMODocuments') {
+job('XRay Demo - SafetyLite') {
 
   	  properties {
-        githubProjectUrl('file:///opt/XRayDemo/TMODocuments')
+        githubProjectUrl('file:///opt/XRayDemo/SafetyLite')
     }
   
     scm {
     	git {
           remote {
-	  	       url('file:///opt/XRayDemo/TMODocuments')
+	  	       url('file:///opt/XRayDemo/SafetyLite')
           }
           branch('**/master')
           extensions {

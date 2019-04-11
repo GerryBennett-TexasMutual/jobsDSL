@@ -1,13 +1,13 @@
-job('XRay Demo - TMODocuments') {
+job('XRay Demo - SF_TMI_IWCS_AvayaOD_Application') {
 
   	  properties {
-        githubProjectUrl('file:///opt/XRayDemo/TMODocuments')
+        githubProjectUrl('file:///opt/XRayDemo/SF_TMI_IWCS_AvayaOD_Application')
     }
   
     scm {
     	git {
           remote {
-	  	       url('file:///opt/XRayDemo/TMODocuments')
+	  	       url('file:///opt/XRayDemo/SF_TMI_IWCS_AvayaOD_Application')
           }
           branch('**/master')
           extensions {
