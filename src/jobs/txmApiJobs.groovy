@@ -1,4 +1,9 @@
-job('XRay Demo - txmApi') {
+folder('xray_demo') {
+		    displayName('XRay Demo')
+		    description('Folder for XRAY Demo Analysis of current TxMutual artifacts.')
+}
+
+job('xray_demo/XRay Demo - txmApi') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/txmApi')

@@ -1,4 +1,9 @@
-job('XRay Demo - Safety') {
+folder('xray_demo') {
+		    displayName('XRay Demo')
+		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
+}
+
+job('xray_demo/XRay Demo - Safety') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/Safety')

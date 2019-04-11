@@ -1,4 +1,9 @@
-job('XRay Demo - SF_TMI_IWCS_AvayaOD_Application') {
+folder('xray_demo') {
+		    displayName('XRay Demo')
+		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
+}
+
+job('xray_demo/XRay Demo - SF_TMI_IWCS_AvayaOD_Application') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/SF_TMI_IWCS_AvayaOD_Application')
