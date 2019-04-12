@@ -50,7 +50,7 @@ job('xray_demo/XRay Demo - GatewayWeb') {
       }
       useSpecs(true)
       uploadSpec{
-        spec('{"files": [{"pattern": "target/*.ear","target": "txmutual-libs-dev-local"}]}')
+        spec('{"files": [{"pattern": "target/*.war","target": "txmutual-libs-dev-local"}]}')
         filePath(null)
       }
       downloadSpec(null)
