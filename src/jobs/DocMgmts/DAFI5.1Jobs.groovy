@@ -3,16 +3,16 @@ folder('xray_demo_DocMgmts') {
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
-job('xray_demo_DocMgmts/XRay Demo - DAFI5') {
+job('xray_demo_DocMgmts/XRay Demo - DAFI') {
 
   	  properties {
-        githubProjectUrl('file:///opt/XRayDemo/DocMgmts/DAFI5.1')
+        githubProjectUrl('file:///opt/XRayDemo/DocMgmts/DAFI')
     }
   
     scm {
     	git {
           remote {
-	  	       url('file:///opt/XRayDemo/DocMgmts/DAFI5.1')
+	  	       url('file:///opt/XRayDemo/DocMgmts/DAFI')
           }
           branch('**/master')
           extensions {
