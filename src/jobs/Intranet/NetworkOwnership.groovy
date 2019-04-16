@@ -3,7 +3,7 @@ folder('xray_demo_Intranet') {
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
-job('xray_demo_Intranet/XRay Demo - Claims') {
+job('xray_demo_Intranet/XRay Demo - NetworkOwnership') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/Intranet/NetworkOwnership')

@@ -3,7 +3,7 @@ folder('xray_demo_DocMgmts') {
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
-job('xray_demo_DocMgmts/XRay Demo - Claims') {
+job('xray_demo_DocMgmts/XRay Demo - DAFI5') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/DocMgmts/DAFI5.1')

@@ -3,7 +3,7 @@ folder('xray_demo_Other') {
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
-job('xray_demo_Other/XRay Demo - Claims') {
+job('xray_demo_Other/XRay Demo - iscwiki') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/Other/iscwiki')
