@@ -1,5 +1,5 @@
 folder('xray_demo_UWApps') {
-		    displayName('XRay Demo')
+		    displayName('XRay Demo UWApps')
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
