@@ -1,9 +1,9 @@
-folder('xray_demo_tmoApps') {
+folder('xray_demo/xray_demo_tmoApps') {
 		    displayName('XRay Demo tmoApps')
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
-job('xray_demo_tmoApps/XRay Demo - Claims') {
+job('xray_demo/xray_demo_tmoApps/XRay Demo - Claims') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/tmoApps/Claims')
@@ -30,7 +30,9 @@ job('xray_demo_tmoApps/XRay Demo - Claims') {
      */
         timestamps()
     }
-	credentialsId('JenkinsArtifactoryCredential')
+	credentialsBinding {
+		credentialsId('JenkinsArtifactoryCredential')
+	}
     artifactoryGenericConfigurator {
       details {
         artifactoryName(null)
@@ -54,7 +56,9 @@ job('xray_demo_tmoApps/XRay Demo - Claims') {
       downloadSpec(null)
       deployerDetails(null)
       resolverDetails(null)
-      deployerCredentialsConfig(null)
+      deployerCredentialsConfig{
+	credentialsId('JenkinsArtifactoryCredential')
+      }
       resolverCredentialsConfig(null)
       deployPattern('')
       resolvePattern('')
