@@ -3,7 +3,7 @@ folder('xray_demo/xray_demo_Finappss') {
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
-job('xray_demo_Finappss/XRay Demo - SecMaint') {
+job('xray_demo/xray_demo_Finappss/XRay Demo - SecMaint') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/Finappss/SecMaint')
