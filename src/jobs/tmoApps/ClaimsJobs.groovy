@@ -54,7 +54,10 @@ job('xray_demo/xray_demo_tmoApps/XRay Demo - Claims') {
       deployerDetails(null)
       resolverDetails(null)
       deployerCredentialsConfig{
+	username(null)
+	password(null)	
 	credentialsId('JenkinsArtifactoryCredential')
+	overridingCredentials(false)
       }
       resolverCredentialsConfig(null)
       deployPattern('')
