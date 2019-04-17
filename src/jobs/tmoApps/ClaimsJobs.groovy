@@ -30,9 +30,6 @@ job('xray_demo/xray_demo_tmoApps/XRay Demo - Claims') {
      */
         timestamps()
     }
-	credentialsBinding {
-		credentialsId('JenkinsArtifactoryCredential')
-	}
     artifactoryGenericConfigurator {
       details {
         artifactoryName(null)
