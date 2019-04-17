@@ -1,4 +1,4 @@
-folder('xray_demo/xray_demo/xray_demo_tmoApps') {
+folder('xray_demo/xray_demo_tmoApps') {
 		    displayName('XRay Demo tmoApps')
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
