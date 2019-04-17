@@ -1,9 +1,9 @@
-folder('xray_demo_tmoApps') {
+folder('xray_demo/xray_demo_tmoApps') {
 		    displayName('XRay Demo tmoApps')
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
-job('xray_demo_tmoApps/XRay Demo - docDataServices') {
+job('xray_demo/xray_demo_tmoApps/XRay Demo - docDataServices') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/tmoApps/docDataServices')
@@ -30,9 +30,6 @@ job('xray_demo_tmoApps/XRay Demo - docDataServices') {
      */
         timestamps()
     }
-	credentialsBinding {
-				usernamePassword('TEMP_DEPLOY_ACCOUNT_USER', 'TEMP_DEPLOY_ACCOUNT_PASSWORD','9638e69f-2433-4b3e-8b6b-0115a3a33864')
-  									     }
     artifactoryGenericConfigurator {
       details {
         artifactoryName(null)
@@ -56,7 +53,12 @@ job('xray_demo_tmoApps/XRay Demo - docDataServices') {
       downloadSpec(null)
       deployerDetails(null)
       resolverDetails(null)
-      deployerCredentialsConfig(null)
+      deployerCredentialsConfig {
+      				username(null)
+				password(null)
+				credentialsId('JenkinsArtifactoryCredential')
+				overridingCredentials(false)
+      }
       resolverCredentialsConfig(null)
       deployPattern('')
       resolvePattern('')

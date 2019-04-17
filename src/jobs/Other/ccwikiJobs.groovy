@@ -1,9 +1,9 @@
-folder('xray_demo_Other') {
+folder('xray_demo/xray_demo_Other') {
 		    displayName('XRay Demo Other')
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
-job('xray_demo_Other/XRay Demo - ccwiki') {
+job('xray_demo/xray_demo_Other/XRay Demo - ccwiki') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/Other/ccwiki')
@@ -30,9 +30,6 @@ job('xray_demo_Other/XRay Demo - ccwiki') {
      */
         timestamps()
     }
-	credentialsBinding {
-				usernamePassword('TEMP_DEPLOY_ACCOUNT_USER', 'TEMP_DEPLOY_ACCOUNT_PASSWORD','9638e69f-2433-4b3e-8b6b-0115a3a33864')
-  									     }
     artifactoryGenericConfigurator {
       details {
         artifactoryName(null)
@@ -56,7 +53,12 @@ job('xray_demo_Other/XRay Demo - ccwiki') {
       downloadSpec(null)
       deployerDetails(null)
       resolverDetails(null)
-      deployerCredentialsConfig(null)
+      deployerCredentialsConfig {
+      				username(null)
+				password(null)
+				credentialsId('JenkinsArtifactoryCredential')
+				overridingCredentials(false)
+      }
       resolverCredentialsConfig(null)
       deployPattern('')
       resolvePattern('')

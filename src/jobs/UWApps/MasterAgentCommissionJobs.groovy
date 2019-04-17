@@ -1,9 +1,9 @@
-folder('xray_demo_UWApps') {
+folder('xray_demo/xray_demo/xray_demo_UWApps') {
 		    displayName('XRay Demo UWApps')
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
-job('xray_demo_UWApps/XRay Demo - MasterAgentCommission') {
+job('xray_demo/xray_demo_UWApps/XRay Demo - MasterAgentCommission') {
 
   	  properties {
         githubProjectUrl('file:///opt/XRayDemo/UWApps/MasterAgentCommission')
@@ -56,7 +56,12 @@ job('xray_demo_UWApps/XRay Demo - MasterAgentCommission') {
       downloadSpec(null)
       deployerDetails(null)
       resolverDetails(null)
-      deployerCredentialsConfig(null)
+      deployerCredentialsConfig {
+      				username(null)
+				password(null)
+				credentialsId('JenkinsArtifactoryCredential')
+				overridingCredentials(false)
+      }
       resolverCredentialsConfig(null)
       deployPattern('')
       resolvePattern('')

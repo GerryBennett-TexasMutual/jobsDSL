@@ -1,4 +1,4 @@
-folder('xray_demo/xray_demo_tmoApps') {
+folder('xray_demo/xray_demo/xray_demo_tmoApps') {
 		    displayName('XRay Demo tmoApps')
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
@@ -53,11 +53,11 @@ job('xray_demo/xray_demo_tmoApps/XRay Demo - Claims') {
       downloadSpec(null)
       deployerDetails(null)
       resolverDetails(null)
-      deployerCredentialsConfig{
-	username(null)
-	password(null)	
-	credentialsId('JenkinsArtifactoryCredential')
-	overridingCredentials(false)
+      deployerCredentialsConfig {
+      				username(null)
+				password(null)	
+				credentialsId('JenkinsArtifactoryCredential')
+				overridingCredentials(false)
       }
       resolverCredentialsConfig(null)
       deployPattern('')
