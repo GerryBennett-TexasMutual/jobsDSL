@@ -30,9 +30,7 @@ job('xray_demo_tmoApps/XRay Demo - Claims') {
      */
         timestamps()
     }
-	credentialsBinding {
-				usernamePassword('TEMP_DEPLOY_ACCOUNT_USER', 'TEMP_DEPLOY_ACCOUNT_PASSWORD','9638e69f-2433-4b3e-8b6b-0115a3a33864')
-  									     }
+	credentialsId('JenkinsArtifactoryCredential')
     artifactoryGenericConfigurator {
       details {
         artifactoryName(null)
