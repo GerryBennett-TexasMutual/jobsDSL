@@ -6,13 +6,13 @@ folder('xray_demo/xray_demo_tmoApp') {
 job('xray_demo/xray_demo_tmoApp/XRay Demo - SF_TMI_IWCS_AvayaOD_Application') {
 
   	  properties {
-        githubProjectUrl('file:///opt/XRayDemo/tmoApp_TMI_IWCS_AvayaOD_Application')
+        githubProjectUrl('file:///opt/XRayDemo/SF_TMI_IWCS_AvayaOD_Application')
     }
   
     scm {
     	git {
           remote {
-	  	       url('file:///opt/XRayDemo/tmoApp_TMI_IWCS_AvayaOD_Application')
+	  	       url('file:///opt/XRayDemo/SF_TMI_IWCS_AvayaOD_Application')
           }
           branch('**/master')
           extensions {
