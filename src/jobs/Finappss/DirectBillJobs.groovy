@@ -33,7 +33,7 @@ job('xray_demo/xray_demo_Finappss/XRay Demo - DirectBill') {
     artifactoryGenericConfigurator {
       details {
         artifactoryName(null)
-        artifactoryUrl(null)
+        artifactoryUrl("http://artifacts-server:8081/artifactory")
         deployReleaseRepository {
           keyFromText('testing')
           keyFromSelect(null)
