@@ -6,13 +6,13 @@ folder('xray_demo/xray_demo_DocMgmts') {
 job('xray_demo/xray_demo_DocMgmts/XRay Demo - DAFI') {
 
   	  properties {
-        githubProjectUrl('file:///opt/XRayDemo/DocMgmts/DAFI')
+        githubProjectUrl('file:///opt/XRayDemo/DocMgmts/DAFI5.1')
     }
   
     scm {
     	git {
           remote {
-	  	       url('file:///opt/XRayDemo/DocMgmts/DAFI')
+	  	       url('file:///opt/XRayDemo/DocMgmts/DAFI5.1')
           }
           branch('**/master')
           extensions {
