@@ -1,4 +1,4 @@
-folder('xray_demo/xray_demo_UWApps') {
+multiJob('xray_demo/xray_demo_UWApps') {
 		    displayName('XRay Demo UWApps')
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
