@@ -57,7 +57,7 @@ job('xray_demo/xray_demo_DocMgmts/XRay Demo - DAFI') {
       				username(null)
 				password(null)
 				credentialsId('JenkinsArtifactoryCredential')
-				overridingCredentials(false)
+				overridingCredentials(true)
       }
       resolverCredentialsConfig(null)
       deployPattern('')

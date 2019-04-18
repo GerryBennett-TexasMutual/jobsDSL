@@ -57,7 +57,7 @@ job('xray_demo/xray_demo_tmoApp/XRay Demo - SF_TMI_IWCS_AvayaOD_Application') {
       				username(null)
 				password(null)
 				credentialsId('JenkinsArtifactoryCredential')
-				overridingCredentials(false)
+				overridingCredentials(true)
       }
       resolverCredentialsConfig(null)
       deployPattern('')
