@@ -32,7 +32,7 @@ job('xray_demo/xray_demo_Intranet/XRay Demo - AWW') {
     }
     artifactoryGenericConfigurator {
       details {
-        artifactoryName(null)
+        artifactoryName("ArtifactoryServer-01")
         artifactoryUrl("http://artifacts-server:8081/artifactory")
         deployReleaseRepository {
           keyFromText('testing')

@@ -32,7 +32,7 @@ job('xray_demo/xray_demo_Finappss/XRay Demo - UCSDaemon') {
     }
     artifactoryGenericConfigurator {
       details {
-        artifactoryName(null)
+        artifactoryName("ArtifactoryServer-01")
         artifactoryUrl("http://artifacts-server:8081/artifactory")
         deployReleaseRepository {
           keyFromText('testing')
