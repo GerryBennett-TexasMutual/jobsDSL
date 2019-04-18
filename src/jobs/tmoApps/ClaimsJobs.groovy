@@ -1,6 +1,5 @@
-
-multiJob('xray_demo/xray_demo_tmoApps') {
-		    displayName('XRay Demo tmoApps')
+multiJob('xray_demo/xray_demo_tmoApps2') {
+		    displayName('XRay Demo tmoApps2')
 		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
 }
 
