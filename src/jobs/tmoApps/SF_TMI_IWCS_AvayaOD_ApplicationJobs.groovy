@@ -1,82 +1,34 @@
-folder('xray_demo/xray_demo_tmoApp') {
-		    displayName('XRay Demo tmoApp')
-		    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
+folder('nexus_iq_demo') {
+     displayName('Nexus IQ')
+     description('Folder for Nexus IQ Demo Analysis of current txmutual artifacts')
 }
-
-job('xray_demo/xray_demo_tmoApp/XRay Demo - SF_TMI_IWCS_AvayaOD_Application') {
-
-  	  properties {
-        githubProjectUrl('file:///opt/XRayDemo/tmoApps/SF_TMI_IWCS_AvayaOD_Application')
-    }
-  
+folder('nexus_iq_demo/nexus_iq_demo__TMI_IWCS_AvayaOD_Application') {
+                    displayName('XRay Demo _TMI_IWCS_AvayaOD_Application')
+                    description('Folder for XRAY Demo Analysis of current txmutual artifacts')
+}
+job('nexus_iq_demo/nexus_iq_demo__TMI_IWCS_AvayaOD_Application/XRay Demo - SF_TMI_IWCS_AvayaOD_Application')
+{
     scm {
-    	git {
-          remote {
-	  	       url('file:///opt/XRayDemo/tmoApps/SF_TMI_IWCS_AvayaOD_Application')
-          }
-          branch('**/master')
-          extensions {
-                    wipeOutWorkspace()
-          }
+        git {
+        remote {
+                    url('file:///opt/XRayDemo/_TMI_IWCS_AvayaOD_Application/SF_TMI_IWCS_AvayaOD_Application')
+        }
+        branch('**/master')
+            extensions {
+                        wipeOutWorkspace()
+            }
         }
     }
-  
-  wrappers {
-          wrappers {
-        // colorizeOutput()
-              
-   	      /**
-     * Adds timestamps to the console log.
-     */
-        timestamps()
-    }
-    artifactoryGenericConfigurator {
-      details {
-        artifactoryName("ArtifactoryServer-01")
-        artifactoryUrl("http://artifacts-server:8081/artifactory")
-        deployReleaseRepository {
-          keyFromText('testing')
-          keyFromSelect(null)
-          dynamicMode(true)
+    steps {
+        iqPolicyEvaluatorBuildStep {
+          iqStage('build')
+          iqApplication {
+            manualApplication {
+              applicationId('SF_TMI_IWCS_AvayaOD_Application2')
+            }
+          }
+          failBuildOnNetworkError(false)
+          jobCredentialsId(null)
         }
-        deploySnapshotRepository(null)
-        resolveReleaseRepository(null)
-        resolveSnapshotRepository(null)
-        userPluginKey(null)
-        userPluginParams(null)
-      }
-      useSpecs(true)
-      uploadSpec{
-        spec('{"files": [{"pattern": "target/*.ear","target": "txmutual-libs-dev-local"}]}')
-        filePath(null)
-      }
-      downloadSpec(null)
-      deployerDetails(null)
-      resolverDetails(null)
-      deployerCredentialsConfig {
-      				username(null)
-				password(null)
-				credentialsId('JenkinsArtifactoryCredential')
-				overridingCredentials(true)
-      }
-      resolverCredentialsConfig(null)
-      deployPattern('')
-      resolvePattern('')
-      matrixParams('')
-      deployBuildInfo(true)
-      includeEnvVars(true)
-      envVarsPatterns {
-        includePatterns(null)
-        excludePatterns('*password*,*secret*,*key*') 
-      }
-      discardOldBuilds(true)
-      discardBuildArtifacts(true)
-      multiConfProject(false)
-      artifactoryCombinationFilter('')
-      deploymentProperties(null)
-      asyncBuildRetention(false) 
-      customBuildName('')
-      overrideBuildName(false)
     }
-  }
 }
