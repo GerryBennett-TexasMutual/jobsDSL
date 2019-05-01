@@ -11,7 +11,7 @@ job('nexus_iq_demo/nexus_iq_demo_DocMgmts/XRay Demo - DAFI')
     scm {
         git {
         remote {
-                    url('file:///opt/XRayDemo/DocMgmts/DAFI')
+                    url('file:///opt/XRayDemo/DocMgmts/DAFI5.1')
         }
         branch('**/master')
             extensions {
